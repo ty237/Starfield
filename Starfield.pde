@@ -32,9 +32,9 @@ void draw()
        }
     }
   }
-  fill(0);
-  text(mouseX, 20, 100);
-  text(mouseY, 40, 100);
+//  fill(0);
+//  text(mouseX, 20, 100);
+//  text(mouseY, 40, 100);
 }
 class Particle
 {
