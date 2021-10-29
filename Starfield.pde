@@ -39,12 +39,14 @@ void draw()
 class Particle
 {
  double x, y, angle, Xspeed, Yspeed;
+ String nameOfType;
  color colorType;
   Particle() {
     x = sizer/2;
     y = sizer/2;
     angle = Math.random()*2*(Math.PI);
     double speed = Math.random()*speedScale;
+    nameOfType = "Starfield$Particle";
     Xspeed = speed;
     Yspeed = speed;
     colorType = color(135, 206, 235);
@@ -68,7 +70,7 @@ class Particle
     }
   }
   void show() {
-    if (this.getClass().getName() == "Starfield$Particle") {
+    if (this.nameOfType == "Starfield$Particle") {
       fill(colorType);
       ellipse((float)x,(float)y, 5, 7);
     } else {
@@ -86,6 +88,7 @@ class ToxicWaste extends Particle {
     double speed = Math.random()*speedScale;
     Xspeed = speed;
     Yspeed = speed;
+    nameOfType = "Starfield$ToxicWasteParticle";
     colorType = color(0);
   }
 }
